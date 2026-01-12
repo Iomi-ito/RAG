@@ -1,0 +1,11 @@
+requests
+openai
+faiss-cpu
+langchain
+langchain-community
+langchain-text-splitters
+langchain-huggingface
+pypdf
+sentence-transformers
+spacy
+python -m spacy download en_core_web_lg
