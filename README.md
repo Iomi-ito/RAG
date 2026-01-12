@@ -54,3 +54,28 @@ cd RAG
 В файле config.py необходимо указать API-ключ DeepSeek:
 ```API_KEY='<КЛЮЧ>'```
 
+### 3. Подготовка окружения и установка зависимостей
+Создаём виртуальное окружение и устанавливаем зависимости из requirements.txt
+```bash
+python -m venv venv
+source venv/bin/activate        # Linux / macOS
+# venv\Scripts\activate         # Windows
+
+pip install -r requirements.txt
+```
+### 4. Установка модели spaCy (опционально)
+Языковая модель spaCy используется только в скрипте extract_companies.py.
+Основная RAG-система (main.py) может быть запущена без spaCy при наличии готового списка компаний.
+```bash
+python -m spacy download en_core_web_lg
+```
+### 5. Для корректного запуска main.py должны быть подготовлены следующие данные:
+
+Файл с вопросами ```data/questions.json```
+Список компаний ```data/companies.json```
+Векторное хранилище FAISS ```data/rag_index/```
+
+### 6. Последовательность запуска (полный пайплайн)
+python extract_companies.py   # извлечение компаний
+python vector_store.py        # построение FAISS-индекс
+python main.py                # запуск RAG-системы и формирование submission
