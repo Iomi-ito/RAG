@@ -75,6 +75,6 @@ python -m spacy download en_core_web_lg
 Векторное хранилище FAISS ```data/rag_index/```
 
 ### 6. Последовательность запуска (полный пайплайн)
--- extract_companies.py   # извлечение компаний
--- vector_store.py        # построение FAISS-индекс
--- main.py                # запуск RAG-системы и формирование submission
+- extract_companies.py   # извлечение компаний
+- vector_store.py        # построение FAISS-индекс
+- main.py                # запуск RAG-системы и формирование submission
