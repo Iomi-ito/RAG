@@ -48,7 +48,7 @@
 ```bash
 git clone https://github.com/Iomi-ito/RAG
 cd RAG
-```bash
+```
 
 ### 2. Ключ API
 В файле config.py необходимо указать API-ключ DeepSeek:
