@@ -58,8 +58,7 @@ cd RAG
 Создаём виртуальное окружение и устанавливаем зависимости из requirements.txt
 ```bash
 python -m venv venv
-source venv/bin/activate        # Linux / macOS
-# venv\Scripts\activate         # Windows
+venv\Scripts\activate   
 
 pip install -r requirements.txt
 ```
@@ -76,8 +75,6 @@ python -m spacy download en_core_web_lg
 Векторное хранилище FAISS ```data/rag_index/```
 
 ### 6. Последовательность запуска (полный пайплайн)
-extract_companies.py   # извлечение компаний
-
-vector_store.py        # построение FAISS-индекс
-
-main.py                # запуск RAG-системы и формирование submission
+-- extract_companies.py   # извлечение компаний
+-- vector_store.py        # построение FAISS-индекс
+-- main.py                # запуск RAG-системы и формирование submission
